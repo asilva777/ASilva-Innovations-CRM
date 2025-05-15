@@ -23,7 +23,63 @@
   </header>
 
   <!-- Navigation Menu -->
-  <nav style="background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <nav style="background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">/* Base styles (desktop-first) */
+body {
+  font-family: 'Montserrat', 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, section {
+  padding: 1rem 2rem;
+}
+
+/* Navigation menu */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #002c4a;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+
+/* Tablets and smaller desktops */
+@media screen and (max-width: 1024px) {
+  nav ul {
+    justify-content: space-around;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  section {
+    padding: 1rem;
+  }
+}
+
     <ul style="list-style: none; display: flex; justify-content: center; padding: 1rem 0; margin: 0;">
       <li style="margin: 0 15px;"><a href="https://asilvainnovations.com" target="_blank">Home</a></li>
       <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/services" target="_blank">Services</a></li>
@@ -105,6 +161,37 @@
   </section>
 
   <!-- JavaScript File Link -->
+  <script>
+  function adjustContentForDevice() {
+    const width = window.innerWidth;
+    const aboutSection = document.getElementById('about');
+    
+    if(width <= 768) {
+      // For mobile devices: simplify content or change text
+      aboutSection.innerHTML = `
+        <h2>App Overview (Mobile)</h2>
+        <p><strong>App Name:</strong> ASilva Innovations CRM</p>
+        <p><strong>Description:</strong> Mobile-friendly CRM for managing customers and deals on the go.</p>
+      `;
+    } else {
+      // For tablets and desktops: full content (you can keep original or reload it)
+      aboutSection.innerHTML = `
+        <h2>App Overview</h2>
+        <p><strong>App Name:</strong> ASilva Innovations CRM</p>
+        <p><strong>Version:</strong> 1.000005</p>
+        <p><strong>Short Description:</strong> ASilva CRM is a Customer Relationship Management (CRM) app tailored by ASilva Innovations to help businesses manage customer needs and interactions effectively. It focuses on enhancing resilience by providing tools for tracking contacts, managing deals, and analyzing customer interactions.</p>
+        <p><strong>Category:</strong> Business Solution</p>
+        <p><strong>Function:</strong> Sales & CRM</p>
+        <p><strong>Industry:</strong> Business Services</p>
+        <p><strong>Purpose:</strong> Organize contacts, opportunities, quotes, and products in a common CRM layout, with contact companies plotted on a map.</p>
+      `;
+    }
+  }
+
+  window.addEventListener('resize', adjustContentForDevice);
+  window.addEventListener('load', adjustContentForDevice);
+</script>
+
   <script>
     // Handle Contact Form Submission
     document.getElementById('contactForm').addEventListener('submit', async (e) => {
