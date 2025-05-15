@@ -88,8 +88,8 @@ Access your business insights, open tasks, and deal tracking from the dashboard.
 
 ## 📞 Support & Resources
 
-- Visit our [Help Center](#) for guides and FAQs.  
-- Read our [Privacy Policy](#) and [Terms of Use](#).  
+- Visit our [Help Center](https://asilvainnovations.com/contact) for guides and FAQs.  
+- Read our [Privacy Policy](https://asilvainnovations.com/privacy-policy) and [Terms of Use](https://asilvainnovations.com/terms-of-service).  
 - Need help? Contact support via the **Contact Us** section in the app.
 
 ---
