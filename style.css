@@ -1,0 +1,62 @@
+/* ASilva Innovations CRM - Unified Style Guide */
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: #003f5c;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #003f5c;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #2f4b7c;
+  margin-bottom: 0.5rem;
+}
+
+/* Section Card */
+section {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 63, 92, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Code Blocks */
+code {
+  background: #e8eef4;
+  color: #003f5c;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
+
+pre {
+  background: #f0f4f8;
+  border: 1px solid #dde3ea;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+/* Strong Text Labels */
+strong {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #374e6a;
+}
