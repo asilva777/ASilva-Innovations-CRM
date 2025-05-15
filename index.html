@@ -1,0 +1,91 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>ASilva CRM</title>  
+  <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  <!-- Header Section -->  
+  <header>  
+    <h1>ASilva CRM</h1>  
+    <p>Empowering SMEs with AI-Driven Resilience & Customer Relationship Management</p>  
+  </header>  
+
+  <!-- Navigation Menu -->  
+  <nav>  
+    <ul>  
+      <li><a href="#features">Features</a></li>  
+      <li><a href="#industries">Industries</a></li>  
+      <li><a href="#frameworks">Frameworks</a></li>  
+      <li><a href="#contact">Contact</a></li>  
+      <li><a href="#login">Login</a></li>  
+    </ul>  
+  </nav>  
+
+  <!-- Features Section -->  
+  <section id="features">  
+    <h2>CRM Features</h2>  
+    <ul>  
+      <li>User-Friendly Interface</li>  
+      <li>Contact and Deals Management</li>  
+      <li>Task and Activity Tracking</li>  
+      <li>Analytics and Reporting</li>  
+      <li>Workflow Automation</li>  
+    </ul>  
+  </section>  
+
+  <!-- Industries Section -->  
+  <section id="industries">  
+    <h2>Industries We Serve</h2>  
+    <ul>  
+      <li>Business Services</li>  
+      <li>Retail & E-commerce</li>  
+      <li>Consulting & Professional Services</li>  
+      <li>Technology & SaaS Providers</li>  
+    </ul>  
+  </section>  
+
+  <!-- Frameworks Section -->  
+  <section id="frameworks">  
+    <h2>Resilience Frameworks</h2>  
+    <div class="framework">  
+      <h3>Real-Time Leadership</h3>  
+      <p>Agile decision-making tools for fast response to challenges.</p>  
+    </div>  
+    <div class="framework">  
+      <h3>DDRiVE</h3>  
+      <p>Evaluate risks and vulnerabilities with data-driven intelligence.</p>  
+    </div>  
+    <div class="framework">  
+      <h3>AIMPACT</h3>  
+      <p>Leverage AI-powered analytics to streamline operations and unlock insights.</p>  
+    </div>  
+  </section>  
+
+  <!-- Contact Section -->  
+  <section id="contact">  
+    <h2>Contact Us</h2>  
+    <form id="contactForm" method="POST" action="/api/contact">  
+      <input type="text" name="name" id="name" placeholder="Your Name" required>  
+      <input type="email" name="email" id="email" placeholder="Your Email" required>  
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>  
+      <button type="submit">Send</button>  
+    </form>  
+  </section>  
+
+  <!-- Login Section -->  
+  <section id="login">  
+    <h2>Login</h2>  
+    <form id="loginForm" method="POST" action="/api/login">  
+      <input type="email" name="loginEmail" placeholder="Email" required>  
+      <input type="password" name="loginPassword" placeholder="Password" required>  
+      <button type="submit">Login</button>  
+    </form>  
+  </section>  
+
+  <!-- JavaScript File Link -->  
+  <script src="script.js"></script>  
+</body>  
+</html>
