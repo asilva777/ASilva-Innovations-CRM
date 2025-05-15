@@ -1,97 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ASilva Innovations CRM</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Internal Styles -->
   <style>
     body {
       font-family: 'Montserrat', 'Roboto Condensed', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #002c4a, #ffffff);
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
     header h1 {
       font-family: 'Oswald', sans-serif;
+      margin: 0;
+      font-weight: 600;
+    }
+    nav {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #002c4a;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 1rem 2rem;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 1024px) {
+      nav ul {
+        justify-content: space-around;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      header {
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      section {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Header Section -->
-  <header style="background: linear-gradient(to right, #002c4a, #ffffff); color: white; padding: 2rem; text-align: center;">
+  <header>
     <h1>ASilva Innovations CRM</h1>
     <p>Empowering SMEs with AI-Driven Resilience & Customer Relationship Management</p>
   </header>
 
   <!-- Navigation Menu -->
-  <nav style="background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">/* Base styles (desktop-first) */
-body {
-  font-family: 'Montserrat', 'Roboto Condensed', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header, nav, section {
-  padding: 1rem 2rem;
-}
-
-/* Navigation menu */
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #002c4a;
-  font-weight: 600;
-}
-
-/* Responsive adjustments */
-
-/* Tablets and smaller desktops */
-@media screen and (max-width: 1024px) {
-  nav ul {
-    justify-content: space-around;
-  }
-}
-
-/* Mobile devices */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 1rem;
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  section {
-    padding: 1rem;
-  }
-}
-
-    <ul style="list-style: none; display: flex; justify-content: center; padding: 1rem 0; margin: 0;">
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com" target="_blank">Home</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/services" target="_blank">Services</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/aimpact" target="_blank">AIMPACT</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/ddrive" target="_blank">DDRiVE</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/real-time-leadership" target="_blank">Real-Time Leadership</a></li>
-      <li style="margin: 0 15px;"><a href="#features">Features</a></li>
-      <li style="margin: 0 15px;"><a href="#industries">Industries</a></li>
-      <li style="margin: 0 15px;"><a href="#frameworks">Frameworks</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/contact-us">Contact</a></li>
-      <li style="margin: 0 15px;"><a href="https://asilvainnovations.com/m/account" target="_blank" rel="noopener">Login</a></li>
-      <li style="margin: 0 15px;"><a href="/api/docs" target="_blank">API Docs</a></li>
+  <nav>
+    <ul>
+      <li><a href="https://asilvainnovations.com" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="https://asilvainnovations.com/services" target="_blank" rel="noopener">Services</a></li>
+      <li><a href="https://asilvainnovations.com/aimpact" target="_blank" rel="noopener">AIMPACT</a></li>
+      <li><a href="https://asilvainnovations.com/ddrive" target="_blank" rel="noopener">DDRiVE</a></li>
+      <li><a href="https://asilvainnovations.com/real-time-leadership" target="_blank" rel="noopener">Real-Time Leadership</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="https://asilvainnovations.com/contact-us" target="_blank" rel="noopener">Contact</a></li>
+      <li><a href="https://asilvainnovations.com/m/account" target="_blank" rel="noopener">Login</a></li>
+      <li><a href="/api/docs" target="_blank" rel="noopener">API Docs</a></li>
     </ul>
   </nav>
 
