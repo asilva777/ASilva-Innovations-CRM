@@ -2,133 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ASilva Innovations CRM</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Internal Styles -->
   <style>
     body {
       font-family: 'Montserrat', 'Roboto Condensed', sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
       background: linear-gradient(to right, #002c4a, #ffffff);
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
     header h1 {
       font-family: 'Oswald', sans-serif;
       margin: 0;
-      font-weight: 600;
     }
+
     nav {
       background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
-    nav ul {
-      list-style: none;
+
+    nav .menu {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 0;
+      list-style: none;
       margin: 0;
+      padding: 1rem 0;
     }
-    nav ul li {
+
+    nav .menu li {
       margin: 0 15px;
     }
-    nav ul li a {
+
+    nav .menu li a {
       text-decoration: none;
       color: #002c4a;
       font-weight: 600;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #002c4a;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+
+      nav .menu.active {
+        display: flex;
+      }
+
+      nav .menu li {
+        margin: 10px 0;
+      }
+
+      header {
+        padding: 1rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
     }
 
     section {
       padding: 1rem 2rem;
     }
 
-    /* Responsive adjustments */
-    @media screen and (max-width: 1024px) {
-      nav ul {
-        justify-content: space-around;
-      }
+    form input, form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      font-family: inherit;
     }
-    @media screen and (max-width: 768px) {
-      header {
-        padding: 1rem;
-        text-align: center;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-      section {
-        padding: 1rem;
-      }
+
+    form button {
+      padding: 0.5rem 1rem;
+      background-color: #002c4a;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
+
+  <!-- Header -->
   <header>
     <h1>ASilva Innovations CRM</h1>
     <p>Empowering SMEs with AI-Driven Resilience & Customer Relationship Management</p>
   </header>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="https://asilvainnovations.com" target="_blank" rel="noopener">Home</a></li>
-      <li><a href="https://asilvainnovations.com/services" target="_blank" rel="noopener">Services</a></li>
-      <li><a href="https://asilvainnovations.com/aimpact" target="_blank" rel="noopener">AIMPACT</a></li>
-      <li><a href="https://asilvainnovations.com/ddrive" target="_blank" rel="noopener">DDRiVE</a></li>
-      <li><a href="https://asilvainnovations.com/real-time-leadership" target="_blank" rel="noopener">Real-Time Leadership</a></li>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="https://asilvainnovations.com" target="_blank">Home</a></li>
+      <li><a href="https://asilvainnovations.com/services" target="_blank">Services</a></li>
+      <li><a href="https://asilvainnovations.com/aimpact" target="_blank">AIMPACT</a></li>
+      <li><a href="https://asilvainnovations.com/ddrive" target="_blank">DDRiVE</a></li>
+      <li><a href="https://asilvainnovations.com/real-time-leadership" target="_blank">Real-Time Leadership</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#frameworks">Frameworks</a></li>
-      <li><a href="https://asilvainnovations.com/contact-us" target="_blank" rel="noopener">Contact</a></li>
+      <li><a href="https://asilvainnovations.com/contact-us">Contact</a></li>
       <li><a href="https://asilvainnovations.com/m/account" target="_blank" rel="noopener">Login</a></li>
-      <li><a href="/api/docs" target="_blank" rel="noopener">API Docs</a></li>
+      <li><a href="/api/docs" target="_blank">API Docs</a></li>
     </ul>
   </nav>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
     <h2>App Overview</h2>
     <p><strong>App Name:</strong> ASilva Innovations CRM</p>
     <p><strong>Version:</strong> 1.000005</p>
-    <p><strong>Short Description:</strong> ASilva CRM is a Customer Relationship Management (CRM) app tailored by ASilva Innovations to help businesses manage customer needs and interactions effectively. It focuses on enhancing resilience by providing tools for tracking contacts, managing deals, and analyzing customer interactions.</p>
+    <p><strong>Short Description:</strong> ASilva CRM helps businesses manage customer interactions effectively, offering tools to track contacts, manage deals, and analyze interactions.</p>
     <p><strong>Category:</strong> Business Solution</p>
     <p><strong>Function:</strong> Sales & CRM</p>
     <p><strong>Industry:</strong> Business Services</p>
-    <p><strong>Purpose:</strong> Organize contacts, opportunities, quotes, and products in a common CRM layout, with contact companies plotted on a map.</p>
+    <p><strong>Purpose:</strong> Organize contacts, opportunities, and products with map-based views.</p>
   </section>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <section id="features">
     <h2>CRM Features</h2>
     <ul>
-      <li>User-Friendly Interface: Dashboard with an overview of activities, tasks, and key metrics.</li>
-      <li>Contacts Management: Add, edit, and delete contacts with updated information.</li>
-      <li>Deals Management: Add new deals, update statuses, and close deals when completed.</li>
-      <li>Tasks and Activities: Create tasks, assign to contacts/deals, set due dates, and notes.</li>
-      <li>Analytics and Reporting: Generate reports and view analytics to track key metrics and trends.</li>
-      <li>Navigation: Includes Home, Solutions, Resources, Services, Blog, About Us, and Contact Us.</li>
+      <li>Dashboard with activity overview</li>
+      <li>Contact management</li>
+      <li>Deal tracking and status updates</li>
+      <li>Task and activity creation with due dates</li>
+      <li>Analytics and reporting features</li>
+      <li>Navigation: Home, Solutions, Resources, etc.</li>
     </ul>
   </section>
 
-  <!-- Industries Section -->
+  <!-- Industries -->
   <section id="industries">
     <h2>Industries We Serve</h2>
     <ul>
@@ -139,70 +187,71 @@
     </ul>
   </section>
 
-  <!-- Frameworks Section -->
+  <!-- Frameworks -->
   <section id="frameworks">
     <h2>Resilience Frameworks</h2>
     <div class="framework">
       <h3>Real-Time Leadership</h3>
-      <p>Agile decision-making tools for fast response to challenges.</p>
+      <p>Agile decision-making tools for fast responses.</p>
     </div>
     <div class="framework">
       <h3>DDRiVE</h3>
-      <p>Evaluate risks and vulnerabilities with data-driven intelligence.</p>
+      <p>Data-driven intelligence to evaluate risks.</p>
     </div>
     <div class="framework">
       <h3>AIMPACT</h3>
-      <p>Leverage AI-powered analytics to streamline operations and unlock insights.</p>
+      <p>AI analytics to streamline operations.</p>
     </div>
   </section>
 
-
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form id="contactForm">
-      <input type="text" name="name" id="name" placeholder="Your Name" required>
-      <input type="email" name="email" id="email" placeholder="Your Email" required>
-      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
     <p id="contactResponse"></p>
   </section>
 
-  <!-- JavaScript File Link -->
+  <!-- Scripts -->
   <script>
-  function adjustContentForDevice() {
-    const width = window.innerWidth;
-    const aboutSection = document.getElementById('about');
-    
-    if(width <= 768) {
-      // For mobile devices: simplify content or change text
-      aboutSection.innerHTML = `
-        <h2>App Overview (Mobile)</h2>
-        <p><strong>App Name:</strong> ASilva Innovations CRM</p>
-        <p><strong>Description:</strong> Mobile-friendly CRM for managing customers and deals on the go.</p>
-      `;
-    } else {
-      // For tablets and desktops: full content (you can keep original or reload it)
-      aboutSection.innerHTML = `
-        <h2>App Overview</h2>
-        <p><strong>App Name:</strong> ASilva Innovations CRM</p>
-        <p><strong>Version:</strong> 1.000005</p>
-        <p><strong>Short Description:</strong> ASilva CRM is a Customer Relationship Management (CRM) app tailored by ASilva Innovations to help businesses manage customer needs and interactions effectively. It focuses on enhancing resilience by providing tools for tracking contacts, managing deals, and analyzing customer interactions.</p>
-        <p><strong>Category:</strong> Business Solution</p>
-        <p><strong>Function:</strong> Sales & CRM</p>
-        <p><strong>Industry:</strong> Business Services</p>
-        <p><strong>Purpose:</strong> Organize contacts, opportunities, quotes, and products in a common CRM layout, with contact companies plotted on a map.</p>
-      `;
+    // Toggle hamburger menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('active');
+    });
+
+    // Responsive content adjustment
+    function adjustContentForDevice() {
+      const width = window.innerWidth;
+      const about = document.getElementById('about');
+
+      if (width <= 768) {
+        about.innerHTML = `
+          <h2>App Overview (Mobile)</h2>
+          <p><strong>App Name:</strong> ASilva Innovations CRM</p>
+          <p><strong>Description:</strong> Mobile-friendly CRM for managing customers and deals on the go.</p>
+        `;
+      } else {
+        about.innerHTML = `
+          <h2>App Overview</h2>
+          <p><strong>App Name:</strong> ASilva Innovations CRM</p>
+          <p><strong>Version:</strong> 1.000005</p>
+          <p><strong>Short Description:</strong> ASilva CRM helps businesses manage customer interactions effectively, offering tools to track contacts, manage deals, and analyze interactions.</p>
+          <p><strong>Category:</strong> Business Solution</p>
+          <p><strong>Function:</strong> Sales & CRM</p>
+          <p><strong>Industry:</strong> Business Services</p>
+          <p><strong>Purpose:</strong> Organize contacts, opportunities, and products with map-based views.</p>
+        `;
+      }
     }
-  }
 
-  window.addEventListener('resize', adjustContentForDevice);
-  window.addEventListener('load', adjustContentForDevice);
-</script>
+    window.addEventListener('resize', adjustContentForDevice);
+    window.addEventListener('load', adjustContentForDevice);
 
-  <script>
-    // Handle Contact Form Submission
+    // Handle form
     document.getElementById('contactForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('name').value;
