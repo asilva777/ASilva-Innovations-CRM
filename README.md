@@ -1,4 +1,4 @@
-AIMPACT
+AI-Driven SME Perfromance Analytics for Comprenesive Transformation (AIMPACT)
 
 AIMPACT is a data-driven, AI-enhanced analytics platform built for Small and Medium Enterprises (SMEs) in the Philippines. Developed by ASilva Innovations, AIMPACT leverages a Balanced Scorecard (BSC) approach to monitor and improve organizational performance across Financial, Customer, Internal Processes, and Learning & Growth perspectives.
 
