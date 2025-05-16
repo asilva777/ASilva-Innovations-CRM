@@ -1,97 +1,89 @@
-# ASilva Innovations CRM
+AIMPACT
 
-**Version**: 1.000005  
-**Category**: Business Solution  
-**Function**: Sales & CRM  
-**Industry**: Business Services  
+AIMPACT is a data-driven, AI-enhanced analytics platform built for Small and Medium Enterprises (SMEs) in the Philippines. Developed by ASilva Innovations, AIMPACT leverages a Balanced Scorecard (BSC) approach to monitor and improve organizational performance across Financial, Customer, Internal Processes, and Learning & Growth perspectives.
 
-ASilva CRM is a Customer Relationship Management (CRM) application tailored by ASilva Innovations to help businesses, particularly small and medium enterprises (SMEs), manage customer relationships, sales pipelines, and operational resilience.
+🚀 Features
 
----
+AI-Powered Performance Analytics
 
-## 🚀 Short Description
+Customizable Dashboards
 
-ASilva CRM enhances resilience by offering tools for:
-- Tracking and managing contacts
-- Managing sales deals and tasks
-- Analyzing customer interactions
-- Generating data-driven insights
+Real-Time Strategic Insights
 
----
+Risk Mitigation Models
 
-## 🧭 Purpose
+KPI Tracking Aligned with BSC Framework
 
-Organize contacts, opportunities, quotes, and products in a centralized CRM system. Visualize client locations on an integrated map for better outreach.
+🧱 Project Structure
 
----
+AIMPACT/
+├── backend/              # FastAPI backend
+├── frontend/             # HTML/CSS/JS frontend
+├── .github/workflows/   # GitHub Actions CI/CD
+├── docs/                 # Documentation
+├── .gitignore
+├── README.md
+├── LICENSE
+└── requirements.txt
 
-## 🌟 Key Features
+💻 Getting Started
 
-- **User-Friendly Dashboard**: Displays tasks, activities, and performance metrics.
-- **Contacts Management**: Add, edit, delete contact records with detailed info.
-- **Deals Tracking**: Manage sales pipelines, deal stages, and closures.
-- **Task & Activity Scheduling**: Assign tasks with due dates and notes.
-- **Analytics & Reports**: Generate reports, track KPIs, and discover trends.
-- **Navigation**: Access various sections like Solutions, Resources, Blog, etc.
+Prerequisites
 
----
+Python 3.11+
 
-## 🏭 Target Industries
+pip / pipenv / poetry
 
-- Business Services  
-- Retail & E-commerce  
-- Consulting & Professional Services  
-- Technology & SaaS  
+Setup (Backend Only)
 
----
+cd backend
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 
-## 🧠 Resilience Frameworks
+🔧 Technologies Used
 
-- **Real-Time Leadership**: Agile decision-making tools  
-- **DDRiVE**: Data-Driven Risk and Vulnerability Evaluation  
-- **AIMPACT**: AI-powered automation and analytics  
+FastAPI – backend API
 
----
+Chart.js – dashboards
 
-## 📘 Getting Started
+SQLite – starter database (easily replaceable)
 
-### 1. Login
-Open the app and sign in with your email and password.
+GitHub Actions – CI/CD pipeline
 
-### 2. Dashboard
-Access your business insights, open tasks, and deal tracking from the dashboard.
+📦 Installation
 
-### 3. Contacts
-- Add, update, or delete contact profiles.
-- Keep contact details accurate for better engagement.
+See requirements.txt for full dependency list.
 
-### 4. Deals
-- Add new deals and update their progress.
-- Mark completed deals as "closed."
+🧪 Running Tests
 
-### 5. Tasks
-- Schedule follow-ups, assign tasks, and take notes.
+pytest
 
-### 6. Analytics
-- Generate reports from the Reports section.
-- Monitor trends using integrated analytics tools.
+🔐 Secrets & Environment
 
----
+Use .env file for sensitive credentials.
 
-## 📈 Tips for Effective Use
+DATABASE_URL=sqlite:///./aimpact.db
+API_KEY=your-secret-api-key
 
-- Keep your CRM data regularly updated.
-- Use reminders for important activities.
-- Monitor reports to guide strategic decisions.
+🤝 Contributing
 
----
+Fork this repo
 
-## 📞 Support & Resources
+Create a feature branch: git checkout -b feature/new-feature
 
-- Visit our [Help Center](https://asilvainnovations.com/contact) for guides and FAQs.  
-- Read our [Privacy Policy](https://asilvainnovations.com/privacy-policy) and [Terms of Use](https://asilvainnovations.com/terms-of-service).  
-- Need help? Contact support via the **Contact Us** section in the app.
+Commit your changes: git commit -m 'Add new feature'
 
----
+Push to the branch: git push origin feature/new-feature
 
-© ASilva Innovations. All rights reserved.
+Open a Pull Request
+
+📄 License
+
+Licensed under Creative Commons CC BY-NC-SA 4.0.
+
+🔗 Learn More
+
+Visit asilvainnovations.com for more info.
+
